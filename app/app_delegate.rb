@@ -32,7 +32,6 @@ class AppDelegate
   def applicationWillBecomeActive(_)
   end
   
-  
   def default_browser_request
     url_ptr = Pointer.new :object
     url = NSURL.URLWithString("http:")
@@ -50,7 +49,6 @@ class AppDelegate
     promise
   end
   
-  
   def show_items
     @handler.application_list
             .then { |items| matrix_items_initialization(items) }
@@ -59,11 +57,11 @@ class AppDelegate
             .then { default_browser_request }
   end
   
-  
   # Browser Handlers
   def getUrl(event, withReplyEvent:_)
     @url_str = event.paramDescriptorForKeyword(KeyDirectObject).stringValue
     cells = @window_controller.icons_matrix.cells
+    @window_controller.url_label.stringValue = @url_str
     @handler.applications.zip(cells) { |_, cell| cell.enabled = true }
   end
   
@@ -97,5 +95,6 @@ class AppDelegate
     app_name = @handler.applications[selected.tag][:name]
     @handler.openURL(current_url, withApplication:app_name)
     @window_controller.icons_matrix.cells.each { |cell| cell.enabled = true }
+    @window_controller.url_label.stringValue = ''
   end
 end

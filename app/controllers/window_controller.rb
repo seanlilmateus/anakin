@@ -24,6 +24,16 @@ module Luke
       end
     end
     
+    def url_label
+      @url_label ||= NSTextField.alloc.init.tap do |lbl|
+        lbl.bordered = false
+        lbl.editable = true
+        lbl.selectable = false
+        lbl.textColor = NSColor.whiteColor
+        lbl.backgroundColor = NSColor.clearColor
+        # lbl.stringValue = ''
+      end
+    end
     
     def settings
       @settings_controller.window.setFrame(self.window.frame, display:false)
@@ -42,11 +52,13 @@ module Luke
       @_matrix ||= IconsMatrix.new([[0, 0], [145, 145]], num_of_rows, num_of_cols).tap do |m|
         Motion::Layout.new do |layout|
           layout.view transparent_view
-          layout.subviews matrix: m, gear: settings_button
-          layout.vertical '|-15-[matrix]-15-|'
+          layout.subviews matrix: m, gear: settings_button#, label:url_label
+          layout.vertical '|-15-[matrix]-45-|'
           layout.horizontal '|-5-[matrix]-5-|'
           layout.vertical '|-10-[gear(20)]'
           layout.horizontal '|-10-[gear(20)]'
+          layout.constraint(490) { label.centerY == superview.centerY }
+          layout.constraint(490) { label.bottom == superview.bottom + 10 }
         end
       end
     end

@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/seanlilmateus/motion-layout.git
-  revision: b6f544f62ed97b85d4e926d18af1352a28d8d80a
+  revision: 801bff5f43e569410086d5a2772c2193187cf966
   branch: constraint_with_items 
   specs:
     motion-layout (0.0.1)
@@ -17,7 +17,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     motion-require (0.2.0)
-    rake (10.3.1)
+    rake (10.3.2)
 
 PLATFORMS
   ruby

@@ -24,9 +24,8 @@ module Luke
       alert.buttons[1].keyEquivalent = '\033'
       alert.buttons[0].keyEquivalent = '\r'
       
-      Dispatch::Queue.main.async do
-        window = NSApp.windows.first
-        alert.beginSheetModalForWindow(window, completionHandler:-> ret_code {
+      Dispatch::Queue.main.sync do
+        alert.beginSheetModalForWindow(NSApp.windows.first, completionHandler:-> ret_code {
           if ret_code == NSAlertFirstButtonReturn
             promise.fulfill(NSAlertFirstButtonReturn)
           else

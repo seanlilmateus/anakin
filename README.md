@@ -1,6 +1,6 @@
-# Luke 
-####you were the chosen one...
-
+#Luke 
+(you were the chosen one...)
+___
 
 If you are like me, back in the days we only had a Browser, it happens to be the internet Explorer for Mac. Unfortunatelly those days are over, first we got the Mozilla Navigator, than Opera, firefox, Safari, chrome and so on...
 
@@ -19,16 +19,18 @@ All you need is to set Luke as your default Browser, everything else Luke will s
 Get it before Luke turn to dark side.
 
 ## Screenshot:
-![luke](https://github.com/seanlilmateus/luke/blob/master/screenshots/screen.png?raw=true "Coverflow Layout")
+![luke](https://github.com/seanlilmateus/luke/blob/master/screenshots/screen.png?raw=true "Luke Main Screen")
 
 ##ToDo:
 - Better animation to settings
 - Settings: Sort, hide given browsers
 - redesign
 - Icon design
+- Localization (pt, de, es, fr and ...)
 
 
 ##License:
+
 The MIT License (MIT)
 
 Copyright (C) 2014 Mateus Armando

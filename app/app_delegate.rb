@@ -59,6 +59,7 @@ class AppDelegate
   
   # Browser Handlers
   def getUrl(event, withReplyEvent:_)
+    @window_controller.url_label.stringValue = ''
     @url_str = event.paramDescriptorForKeyword(KeyDirectObject).stringValue
     cells = @window_controller.icons_matrix.cells
     @window_controller.url_label.stringValue = @url_str

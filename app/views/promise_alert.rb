@@ -33,7 +33,6 @@ module Luke
           end
         })
       end
-      
       promise
     end
   end

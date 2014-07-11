@@ -37,7 +37,6 @@ module Luke
         lbl.cell.wraps = true
         lbl.cell.lineBreakMode = NSLineBreakByTruncatingMiddle
         lbl.preferredMaxLayoutWidth = 300
-        # lbl.backgroundColor = NSColor.clearColor
       end
     end
     
@@ -64,7 +63,7 @@ module Luke
           layout.vertical   '|-10-[gear(20)]'
           layout.horizontal '|-10-[gear(20)]'
           layout.horizontal '[label(<=300@1000)]'
-          layout.vertical   '[label(==20@1000)]-2-|'
+          layout.vertical   '[label(==20@1000)]-4-|'
           layout.constraint { label.centerX == superview.centerX }
         end
       end

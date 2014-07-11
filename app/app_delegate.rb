@@ -19,15 +19,18 @@ class AppDelegate
     @window_controller = Luke::WindowController.new
     @window = @window_controller.window
     @window.center
-    @window.orderFrontRegardless
     @window.true_center!
+    @window.orderFrontRegardless
     show_items
   end
   
+  def window_positioning
+    @window.true_center!
+    @window.orderFrontRegardless
+  end
   
   def applicationWillResignActive(_)
   end
-  
   
   def applicationWillBecomeActive(_)
   end
@@ -39,13 +42,7 @@ class AppDelegate
     text = 'Default Browser'
     info = "#{Luke::APP_NAME} is not currently set as your default browser. Would you like to make in your default browser?"
     promise = Luke::PromisedAlert.new(text, info)
-    if error.zero? && url_ptr[0] != NSBundle.mainBundle.bundleURL
-      promise.then  { register_as_default_browser } 
-             .catch { |e| puts "failure #{e}" }
-    else
-      promise.reject(0)
-    end
-    
+    promise.reject(0) unless error.zero? || url_ptr[0] != NSBundle.mainBundle.bundleURL
     promise
   end
   
@@ -53,8 +50,11 @@ class AppDelegate
     @handler.application_list
             .then { |items| matrix_items_initialization(items) }
             .then { set_cell_selection_action }
-            .then { Dispatch::Queue.main.sync &@window.method(:true_center!) }
+            .then { Dispatch::Queue.main.sync &self.method(:window_positioning) }
             .then { default_browser_request }
+            .then { register_as_default_browser }
+            .then { Dispatch::Queue.main.after(0.4) { NSApp.hide(nil) } }
+            .catch { NSApp.terminate(nil) }
   end
   
   # Browser Handlers

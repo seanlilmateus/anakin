@@ -1,7 +1,7 @@
 class AppDelegate
   
   def initialize
-    @handler = Luke::URLHandler.new
+    @handler = Anakin::URLHandler.new
   end
   
   
@@ -16,7 +16,7 @@ class AppDelegate
   
   
   def buildWindow
-    @window_controller = Luke::WindowController.new
+    @window_controller = Anakin::WindowController.new
     @window = @window_controller.window
     @window.center
     @window.orderFrontRegardless
@@ -37,8 +37,8 @@ class AppDelegate
     url = NSURL.URLWithString("http:")
     error = LSGetApplicationForURL(url, KLSRolesAll, nil, url_ptr)
     text = 'Default Browser'
-    info = "#{Luke::APP_NAME} is not currently set as your default browser. Would you like to make in your default browser?"
-    promise = Luke::PromisedAlert.new(text, info)
+    info = "#{Anakin::APP_NAME} is not currently set as your default browser. Would you like to make in your default browser?"
+    promise = Anakin::PromisedAlert.new(text, info)
     if error.zero? && url_ptr[0] != NSBundle.mainBundle.bundleURL
       promise.then  { register_as_default_browser } 
              .catch { |e| puts "failure #{e}" }

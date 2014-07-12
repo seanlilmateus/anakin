@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   class TransparentButtonCell < NSButtonCell
     
     def init

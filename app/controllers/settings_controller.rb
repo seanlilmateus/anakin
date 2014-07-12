@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   class SettingsWindowController < NSWindowController
     def init
       rect = NSRect.new([0, 0], [150.0, 150.0])

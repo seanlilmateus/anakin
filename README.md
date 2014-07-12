@@ -1,4 +1,4 @@
-#Luke 
+#Anakin 
 (you were the chosen one...)
 ___
 
@@ -12,14 +12,14 @@ Actually I use diferrent Browsers for diferrents purpose. e.g.:
   3. Safari is my current default Browser
   4. Sleipnir rocks my iOS devices and has a great syncs capabilities with the Mac.
   
-Now you're using your favorite Twitter client and you want to open a Link, it includes a cat flash video... how do you deal with it? HINT: _Luke, you were the chosen one..._
+Now you're using your favorite Twitter client and you want to open a Link, it includes a cat flash video... how do you deal with it? HINT: _Anakin, you were the chosen one..._
 
-All you need is to set Luke as your default Browser, everything else Luke will solve for you.
+All you need is to set Anakin as your default Browser, everything else Anakin will solve for you.
 
-Get it before Luke turn to dark side.
+Get it before Anakin turn to dark side.
 
 ## Screenshot:
-![luke](https://github.com/seanlilmateus/luke/blob/master/screenshots/screen.png?raw=true "Luke Main Screen")
+![Anakin](https://github.com/seanlilmateus/Anakin/blob/master/screenshots/screen.png?raw=true "Anakin Main Screen")
 
 ##ToDo:
 - Better animation to settings

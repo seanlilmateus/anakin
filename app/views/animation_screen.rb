@@ -1,6 +1,6 @@
 # https://github.com/mownier/MONActivityIndicatorView/blob/master/
 # MONActivityIndicatorView/MONActivityIndicatorView.m
-module Luke
+module Anakin
   class LoadingView < NSView
   
     attr_reader :number_of_circles, :internal_spacing

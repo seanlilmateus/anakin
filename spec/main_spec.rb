@@ -1,4 +1,4 @@
-describe "Application 'luke'" do
+describe "Application 'Anakin'" do
   before do
     @app = NSApplication.sharedApplication
   end

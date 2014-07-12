@@ -17,7 +17,7 @@ module Anakin
         layout.horizontal '|-10-[settings_gear(20)]'
         layout.constraint { label.centerX == superview.centerX }
         layout.constraint { label.centerY == superview.centerY + 60 }
-      end
+      end if self.view.subviews.empty?
     end
     
     def label

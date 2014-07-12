@@ -117,7 +117,7 @@ module Anakin
       @delay = 0.2
       @duration = 0.8
       @default_color = NSColor.lightGrayColor
-      self.backgroundColor = NSColor.clearColor
+      # self.backgroundColor = NSColor.blackColor
     end
     
   end

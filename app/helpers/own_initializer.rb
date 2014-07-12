@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   APP_NAME = NSBundle.mainBundle.objectForInfoDictionaryKey('CFBundleDisplayName')
   module OwnInitializer
     def self.new(*args, &block)

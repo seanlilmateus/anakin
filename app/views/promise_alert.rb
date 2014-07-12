@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   class PromisedAlert
     def self.new(message, info='')
       promise = Dispatch::Promise.new

@@ -1,22 +1,42 @@
 class AppDelegate
+  attr_accessor :array_controller
   
   def initialize
-    @handler = Luke::URLHandler.new
+    @handler = Anakin::URLHandler.new
+    @array_controller = NSArrayController.alloc.init    
+    path = NSBundle.mainBundle.bundlePath
+    initial = Application.new(Anakin::APP_NAME, path)
+    data = NSKeyedArchiver.archivedDataWithRootObject([initial])
+    @udc = NSUserDefaultsController.alloc.initWithDefaults(self.defaults, initialValues:{
+      'browsers' => data
+    })
+    
+    # @transformer = NSValueTransformer.valueTransformerForName(NSKeyedUnarchiveFromDataTransformerName)
+    opts = { 
+      NSContinuouslyUpdatesValueBindingOption => true,
+      NSAllowsNullArgumentBindingOption       => true,
+      NSValueTransformerNameBindingOption     => NSKeyedUnarchiveFromDataTransformerName,
+      #NSValueTransformerBindingOption => @transformer
+    }
+    @array_controller.bind(NSContentObjectBinding, 
+                  toObject: @udc, withKeyPath: 'values.browsers', options: opts)
   end
   
+  def defaults
+    @defaults ||= NSUserDefaults.standardUserDefaults
+  end
   
+    
   def applicationWillFinishLaunching(_)
     register_handler
   end
-  
-  
+    
   def applicationDidFinishLaunching(_)
     buildWindow
   end
   
-  
   def buildWindow
-    @window_controller = Luke::WindowController.new
+    @window_controller = Anakin::WindowController.new
     @window = @window_controller.window
     @window.center
     @window.true_center!
@@ -40,8 +60,8 @@ class AppDelegate
     url = NSURL.URLWithString("http:")
     error = LSGetApplicationForURL(url, KLSRolesAll, nil, url_ptr)
     text = 'Default Browser'
-    info = "#{Luke::APP_NAME} is not currently set as your default browser. Would you like to make in your default browser?"
-    promise = Luke::PromisedAlert.new(text, info)
+    info = "#{Anakin::APP_NAME} is not currently set as your default browser. Would you like to make in your default browser?"
+    promise = Anakin::PromisedAlert.new(text, info)
     promise.reject(0) unless error.zero? || url_ptr[0] != NSBundle.mainBundle.bundleURL
     promise
   end
@@ -93,7 +113,7 @@ class AppDelegate
     current_url = @url_str
     @url_str = nil
     selected = sender.selectedCell
-    app_name = @handler.applications[selected.tag][:name]
+    app_name = @handler.applications[selected.tag].name
     @handler.openURL(current_url, withApplication:app_name)
     @window_controller.icons_matrix.cells.each { |cell| cell.enabled = true }
     @window_controller.url_label.stringValue = ''

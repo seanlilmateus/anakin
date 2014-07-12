@@ -1,6 +1,6 @@
 # https://github.com/mownier/MONActivityIndicatorView/blob/master/
 # MONActivityIndicatorView/MONActivityIndicatorView.m
-module Luke
+module Anakin
   class LoadingView < NSView
   
     attr_reader :number_of_circles, :internal_spacing
@@ -56,7 +56,7 @@ module Luke
     private
   
     def remove_circles
-      self.subviews.each &:removeFromSuperview
+      self.subviews.makeObjectsPerformSelector(:removeFromSuperview)
     end
   
     def adjust_frame
@@ -117,7 +117,7 @@ module Luke
       @delay = 0.2
       @duration = 0.8
       @default_color = NSColor.lightGrayColor
-      self.backgroundColor = NSColor.redColor
+      self.backgroundColor = NSColor.clearColor
     end
     
   end

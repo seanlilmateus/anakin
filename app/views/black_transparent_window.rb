@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   class BlackTransparentWindow < NSWindow
     
     include OwnInitializer

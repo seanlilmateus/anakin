@@ -1,4 +1,4 @@
-module Luke
+module Anakin
   class BlackTransparentView < NSView
     
     # TODO: Fix the NSBezierPath Strokes for rounded rects, to avoid double beziers

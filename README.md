@@ -1,9 +1,10 @@
-#Luke 
+#Anakin 
+![chosen one](http://3.bp.blogspot.com/-ItKByZt_rxM/UZicg6V5vvI/AAAAAAAAL5I/quqzKtgHmxM/s1600/chosen-one.gif "you were the chosen one...")
+
 (you were the chosen one...)
 ___
 
 If you are like me, back in the days we only had a Browser, it happens to be the internet Explorer for Mac. Unfortunatelly those days are over, first we got the Mozilla Navigator, than Opera, firefox, Safari, chrome and so on...
-
 
 Actually I use diferrent Browsers for diferrents purpose. e.g.:
 	
@@ -12,25 +13,30 @@ Actually I use diferrent Browsers for diferrents purpose. e.g.:
   3. Safari is my current default Browser
   4. Sleipnir rocks my iOS devices and has a great syncs capabilities with the Mac.
   
-Now you're using your favorite Twitter client and you want to open a Link, it includes a cat flash video... how do you deal with it? HINT: _Luke, you were the chosen one..._
+Now you're using your favorite Twitter client and you want to open a Link, it includes a cat flash video... how do you deal with it? HINT: _Anakin, you were the chosen one..._
 
-All you need is to set Luke as your default Browser, everything else Luke will solve for you.
+All you need is to set Anakin as your default Browser, everything else Anakin will solve for you.
 
-Get it before Luke turn to dark side.
+Get it before Anakin turn to dark side.
 
-## Screenshot:
-![luke](https://github.com/seanlilmateus/luke/blob/master/screenshots/screen.png?raw=true "Luke Main Screen")
+## Screenshots:
+![Anakin Window](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.PNG?raw=true "Anakin Selection Window")
 
-##ToDo:
-- Better animation to settings
+![Anakin Screen 2](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.PNG?raw=true "Anakin Main Screen")
+
+### Contributions
+Anakin is an application written in [Rubymotion](http://www.rubymotion.com) if you want to contribute and have no idea at all just send me a pull request based on my to-do list.
+
+##To-Do:
+- Better flip animation to settings
 - Settings: Sort, hide given browsers
+- fix UI glitches 
 - redesign
 - Icon design
 - Localization (pt, de, es, fr and ...)
 
 
 ##License:
-
 The MIT License (MIT)
 
 Copyright (C) 2014 Mateus Armando

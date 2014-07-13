@@ -20,9 +20,9 @@ All you need is to set Anakin as your default Browser, everything else Anakin wi
 Get it before Anakin turn to dark side.
 
 ## Screenshots:
-![Anakin Window](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.PNG?raw=true "Anakin Selection Window")
+![Anakin Window](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen.PNG?raw=true "Anakin Selection Window" =100x20)
 
-![Anakin Screen 2](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.PNG?raw=true "Anakin Main Screen")
+![Anakin Screen 2](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.PNG?raw=true "Anakin Main Screen" =100x20)
 
 ### Contributions
 Anakin is an application written in [Rubymotion](http://www.rubymotion.com) if you want to contribute and have no idea at all just send me a pull request based on my to-do list.

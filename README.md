@@ -4,7 +4,6 @@ ___
 
 If you are like me, back in the days we only had a Browser, it happens to be the internet Explorer for Mac. Unfortunatelly those days are over, first we got the Mozilla Navigator, than Opera, firefox, Safari, chrome and so on...
 
-
 Actually I use diferrent Browsers for diferrents purpose. e.g.:
 	
   1. Chrome is just my Flash Bootloader
@@ -18,19 +17,24 @@ All you need is to set Anakin as your default Browser, everything else Anakin wi
 
 Get it before Anakin turn to dark side.
 
-## Screenshot:
-![Anakin](https://github.com/seanlilmateus/Anakin/blob/master/screenshots/screen.png?raw=true "Anakin Main Screen")
+## Screenshots:
+![Anakin Window](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.png?raw=true "Anakin Selection Window")
 
-##ToDo:
-- Better animation to settings
+![Anakin Screen 2](https://github.com/seanlilmateus/anakin/blob/master/screenshots/screen1.png?raw=true "Anakin Main Screen")
+
+### Contributions
+Anakin is an application written in [Rubymotion](http://www.rubymotion.com) if you want to contribute and have no idea at all just send me a pull request based on my to-do list.
+
+##To-Do:
+- Better flip animation to settings
 - Settings: Sort, hide given browsers
+- fix UI glitches 
 - redesign
 - Icon design
 - Localization (pt, de, es, fr and ...)
 
 
 ##License:
-
 The MIT License (MIT)
 
 Copyright (C) 2014 Mateus Armando

@@ -1,4 +1,6 @@
 #Anakin 
+![chosen one](http://3.bp.blogspot.com/-ItKByZt_rxM/UZicg6V5vvI/AAAAAAAAL5I/quqzKtgHmxM/s1600/chosen-one.gif "you were the chosen one...")
+
 (you were the chosen one...)
 ___
 
